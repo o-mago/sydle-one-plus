@@ -1,0 +1,17 @@
+{
+  "name": "Ace Editor Theme Sydle One",
+  "description": "Change Ace Editor theme inside Sydle One",
+  "version": "1.0",
+  "web_accessible_resources": [
+    "dracula_theme.css"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.sydle.one/*"],
+      "css": ["dracula_theme.css"],
+      "js": ["script.js"]
+    }
+  ],
+  "permissions": ["tabs", "https://*.sydle.one/*", "file:///*"],
+  "manifest_version": 2
+}
