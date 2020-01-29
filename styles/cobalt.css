@@ -1,133 +1,133 @@
-.ace-cobalt .ace_gutter {
-  background: #011e3a;
+.ace-chrome .ace_gutter {
+  background: #011e3a!important;
   color: rgb(128,145,160)
 }
 
-.ace-cobalt .ace_print-margin {
-  width: 1px;
+.ace-chrome .ace_print-margin {
+  width: 1px!important;
   background: #555555
 }
 
-.ace-cobalt {
-  background-color: #002240;
+.ace-chrome {
+  background-color: #002240!important;
   color: #FFFFFF
 }
 
-.ace-cobalt .ace_cursor {
+.ace-chrome .ace_cursor {
   color: #FFFFFF
 }
 
-.ace-cobalt .ace_marker-layer .ace_selection {
+.ace-chrome .ace_marker-layer .ace_selection {
   background: rgba(179, 101, 57, 0.75)
 }
 
-.ace-cobalt.ace_multiselect .ace_selection.ace_start {
-  box-shadow: 0 0 3px 0px #002240;
+.ace-chrome .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px #002240!important;
 }
 
-.ace-cobalt .ace_marker-layer .ace_step {
+.ace-chrome .ace_marker-layer .ace_step {
   background: rgb(127, 111, 19)
 }
 
-.ace-cobalt .ace_marker-layer .ace_bracket {
-  margin: -1px 0 0 -1px;
+.ace-chrome .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px!important;
   border: 1px solid rgba(255, 255, 255, 0.15)
 }
 
-.ace-cobalt .ace_marker-layer .ace_active-line {
+.ace-chrome .ace_marker-layer .ace_active-line {
   background: rgba(0, 0, 0, 0.35)
 }
 
-.ace-cobalt .ace_gutter-active-line {
+.ace-chrome .ace_gutter-active-line {
   background-color: rgba(0, 0, 0, 0.35)
 }
 
-.ace-cobalt .ace_marker-layer .ace_selected-word {
+.ace-chrome .ace_marker-layer .ace_selected-word {
   border: 1px solid rgba(179, 101, 57, 0.75)
 }
 
-.ace-cobalt .ace_invisible {
+.ace-chrome .ace_invisible {
   color: rgba(255, 255, 255, 0.15)
 }
 
-.ace-cobalt .ace_keyword,
-.ace-cobalt .ace_meta {
+.ace-chrome .ace_keyword,
+.ace-chrome .ace_meta {
   color: #FF9D00
 }
 
-.ace-cobalt .ace_constant,
-.ace-cobalt .ace_constant.ace_character,
-.ace-cobalt .ace_constant.ace_character.ace_escape,
-.ace-cobalt .ace_constant.ace_other {
+.ace-chrome .ace_constant,
+.ace-chrome .ace_constant.ace_character,
+.ace-chrome .ace_constant.ace_character.ace_escape,
+.ace-chrome .ace_constant.ace_other {
   color: #FF628C
 }
 
-.ace-cobalt .ace_invalid {
-  color: #F8F8F8;
+.ace-chrome .ace_invalid {
+  color: #F8F8F8!important;
   background-color: #800F00
 }
 
-.ace-cobalt .ace_support {
+.ace-chrome .ace_support {
   color: #80FFBB
 }
 
-.ace-cobalt .ace_support.ace_constant {
+.ace-chrome .ace_support.ace_constant {
   color: #EB939A
 }
 
-.ace-cobalt .ace_fold {
-  background-color: #FF9D00;
+.ace-chrome .ace_fold {
+  background-color: #FF9D00!important;
   border-color: #FFFFFF
 }
 
-.ace-cobalt .ace_support.ace_function {
+.ace-chrome .ace_support.ace_function {
   color: #FFB054
 }
 
-.ace-cobalt .ace_storage {
+.ace-chrome .ace_storage {
   color: #FFEE80
 }
 
-.ace-cobalt .ace_entity {
+.ace-chrome .ace_entity {
   color: #FFDD00
 }
 
-.ace-cobalt .ace_string {
+.ace-chrome .ace_string {
   color: #3AD900
 }
 
-.ace-cobalt .ace_string.ace_regexp {
+.ace-chrome .ace_string.ace_regexp {
   color: #80FFC2
 }
 
-.ace-cobalt .ace_comment {
-  font-style: italic;
+.ace-chrome .ace_comment {
+  font-style: italic!important;
   color: #0088FF
 }
 
-.ace-cobalt .ace_heading,
-.ace-cobalt .ace_markup.ace_heading {
-  color: #C8E4FD;
+.ace-chrome .ace_heading,
+.ace-chrome .ace_markup.ace_heading {
+  color: #C8E4FD!important;
   background-color: #001221
 }
 
-.ace-cobalt .ace_list,
-.ace-cobalt .ace_markup.ace_list {
+.ace-chrome .ace_list,
+.ace-chrome .ace_markup.ace_list {
   background-color: #130D26
 }
 
-.ace-cobalt .ace_variable {
+.ace-chrome .ace_variable {
   color: #CCCCCC
 }
 
-.ace-cobalt .ace_variable.ace_language {
+.ace-chrome .ace_variable.ace_language {
   color: #FF80E1
 }
 
-.ace-cobalt .ace_meta.ace_tag {
+.ace-chrome .ace_meta.ace_tag {
   color: #9EFFFF
 }
 
-.ace-cobalt .ace_indent-guide {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHCLSvkPAAP3AgSDTRd4AAAAAElFTkSuQmCC) right repeat-y
+.ace-chrome .ace_indent-guide {
+  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHCLSvkPAAP3AgSDTRd4AAAAAElFTkSuQmCC) right repeat-y
 }

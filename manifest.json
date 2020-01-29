@@ -1,17 +1,35 @@
 {
   "name": "Ace Editor Theme Sydle One",
   "description": "Change Ace Editor theme inside Sydle One",
-  "version": "1.0",
+  "version": "1.2",
   "web_accessible_resources": [
-    "dracula_theme.css"
+    "styles/ambiance.css", "styles/chaos.css", "styles/chrome.css", "styles/clouds.css", 
+        "styles/clouds_midnight.css", "styles/cobalt.css", "styles/crimson_editor.css", "styles/dawn.css", 
+        "styles/dracula.css", "styles/dreamweaver.css", "styles/eclipse.css", "styles/github.css", "styles/gob.css", 
+        "styles/gruvbox.css", "styles/idle_fingers.css", "styles/iplastic.css", "styles/katzenmilch.css", "styles/kr_theme.css", 
+        "styles/kuroir.css", "styles/merbivore.css", "styles/merbivore_soft.css", "styles/monokai.css", "styles/mono_industrial.css", 
+        "styles/pastel_on_dark.css", "styles/solarized_dark.css", "styles/solarized_light.css", "styles/sqlserver.css", "styles/terminal.css", 
+        "styles/textmate.css", "styles/tomorrow.css", "styles/tomorrow_night.css", "styles/tomorrow_night_blue.css", "styles/tomorrow_night_bright.css", 
+        "styles/tomorrow_night_eighties.css", "styles/twilight.css", "styles/vibrant_ink.css", "styles/xcode.css"
   ],
   "content_scripts": [
     {
       "matches": ["https://*.sydle.one/*"],
-      "css": ["dracula_theme.css"],
+      "css": ["styles/ambiance.css", "styles/chaos.css", "styles/chrome.css", "styles/clouds.css", 
+        "styles/clouds_midnight.css", "styles/cobalt.css", "styles/crimson_editor.css", "styles/dawn.css", 
+        "styles/dracula.css", "styles/dreamweaver.css", "styles/eclipse.css", "styles/github.css", "styles/gob.css", 
+        "styles/gruvbox.css", "styles/idle_fingers.css", "styles/iplastic.css", "styles/katzenmilch.css", "styles/kr_theme.css", 
+        "styles/kuroir.css", "styles/merbivore.css", "styles/merbivore_soft.css", "styles/monokai.css", "styles/mono_industrial.css", 
+        "styles/pastel_on_dark.css", "styles/solarized_dark.css", "styles/solarized_light.css", "styles/sqlserver.css", "styles/terminal.css", 
+        "styles/textmate.css", "styles/tomorrow.css", "styles/tomorrow_night.css", "styles/tomorrow_night_blue.css", "styles/tomorrow_night_bright.css", 
+        "styles/tomorrow_night_eighties.css", "styles/twilight.css", "styles/vibrant_ink.css", "styles/xcode.css"],
       "js": ["script.js"]
     }
   ],
-  "permissions": ["tabs", "https://*.sydle.one/*", "file:///*"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "permissions": ["https://*.sydle.one/*", "file:///*", "storage"],
   "manifest_version": 2
 }

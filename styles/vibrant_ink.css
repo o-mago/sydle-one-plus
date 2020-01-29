@@ -1,109 +1,109 @@
-.ace-vibrant-ink .ace_gutter {
-  background: #1a1a1a;
+.ace-chrome .ace_gutter {
+  background: #1a1a1a!important;
   color: #BEBEBE
 }
 
-.ace-vibrant-ink .ace_print-margin {
-  width: 1px;
+.ace-chrome .ace_print-margin {
+  width: 1px!important;
   background: #1a1a1a
 }
 
-.ace-vibrant-ink {
-  background-color: #0F0F0F;
+.ace-chrome {
+  background-color: #0F0F0F!important;
   color: #FFFFFF
 }
 
-.ace-vibrant-ink .ace_cursor {
+.ace-chrome .ace_cursor {
   color: #FFFFFF
 }
 
-.ace-vibrant-ink .ace_marker-layer .ace_selection {
+.ace-chrome .ace_marker-layer .ace_selection {
   background: #6699CC
 }
 
-.ace-vibrant-ink.ace_multiselect .ace_selection.ace_start {
-  box-shadow: 0 0 3px 0px #0F0F0F;
+.ace-chrome .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px #0F0F0F!important;
 }
 
-.ace-vibrant-ink .ace_marker-layer .ace_step {
+.ace-chrome .ace_marker-layer .ace_step {
   background: rgb(102, 82, 0)
 }
 
-.ace-vibrant-ink .ace_marker-layer .ace_bracket {
-  margin: -1px 0 0 -1px;
+.ace-chrome .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px!important;
   border: 1px solid #404040
 }
 
-.ace-vibrant-ink .ace_marker-layer .ace_active-line {
+.ace-chrome .ace_marker-layer .ace_active-line {
   background: #333333
 }
 
-.ace-vibrant-ink .ace_gutter-active-line {
+.ace-chrome .ace_gutter-active-line {
   background-color: #333333
 }
 
-.ace-vibrant-ink .ace_marker-layer .ace_selected-word {
+.ace-chrome .ace_marker-layer .ace_selected-word {
   border: 1px solid #6699CC
 }
 
-.ace-vibrant-ink .ace_invisible {
+.ace-chrome .ace_invisible {
   color: #404040
 }
 
-.ace-vibrant-ink .ace_keyword,
-.ace-vibrant-ink .ace_meta {
+.ace-chrome .ace_keyword,
+.ace-chrome .ace_meta {
   color: #FF6600
 }
 
-.ace-vibrant-ink .ace_constant,
-.ace-vibrant-ink .ace_constant.ace_character,
-.ace-vibrant-ink .ace_constant.ace_character.ace_escape,
-.ace-vibrant-ink .ace_constant.ace_other {
+.ace-chrome .ace_constant,
+.ace-chrome .ace_constant.ace_character,
+.ace-chrome .ace_constant.ace_character.ace_escape,
+.ace-chrome .ace_constant.ace_other {
   color: #339999
 }
 
-.ace-vibrant-ink .ace_constant.ace_numeric {
+.ace-chrome .ace_constant.ace_numeric {
   color: #99CC99
 }
 
-.ace-vibrant-ink .ace_invalid,
-.ace-vibrant-ink .ace_invalid.ace_deprecated {
-  color: #CCFF33;
+.ace-chrome .ace_invalid,
+.ace-chrome .ace_invalid.ace_deprecated {
+  color: #CCFF33!important;
   background-color: #000000
 }
 
-.ace-vibrant-ink .ace_fold {
-  background-color: #FFCC00;
+.ace-chrome .ace_fold {
+  background-color: #FFCC00!important;
   border-color: #FFFFFF
 }
 
-.ace-vibrant-ink .ace_entity.ace_name.ace_function,
-.ace-vibrant-ink .ace_support.ace_function,
-.ace-vibrant-ink .ace_variable {
+.ace-chrome .ace_entity.ace_name.ace_function,
+.ace-chrome .ace_support.ace_function,
+.ace-chrome .ace_variable {
   color: #FFCC00
 }
 
-.ace-vibrant-ink .ace_variable.ace_parameter {
+.ace-chrome .ace_variable.ace_parameter {
   font-style: italic
 }
 
-.ace-vibrant-ink .ace_string {
+.ace-chrome .ace_string {
   color: #66FF00
 }
 
-.ace-vibrant-ink .ace_string.ace_regexp {
+.ace-chrome .ace_string.ace_regexp {
   color: #44B4CC
 }
 
-.ace-vibrant-ink .ace_comment {
+.ace-chrome .ace_comment {
   color: #9933CC
 }
 
-.ace-vibrant-ink .ace_entity.ace_other.ace_attribute-name {
-  font-style: italic;
+.ace-chrome .ace_entity.ace_other.ace_attribute-name {
+  font-style: italic!important;
   color: #99CC99
 }
 
-.ace-vibrant-ink .ace_indent-guide {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYNDTc/oPAALPAZ7hxlbYAAAAAElFTkSuQmCC) right repeat-y
+.ace-chrome .ace_indent-guide {
+  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYNDTc/oPAALPAZ7hxlbYAAAAAElFTkSuQmCC) right repeat-y
 }

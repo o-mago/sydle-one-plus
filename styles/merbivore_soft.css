@@ -1,110 +1,110 @@
-.ace-merbivore-soft .ace_gutter {
-  background: #262424;
+.ace-chrome .ace_gutter {
+  background: #262424!important;
   color: #E6E1DC
 }
 
-.ace-merbivore-soft .ace_print-margin {
-  width: 1px;
+.ace-chrome .ace_print-margin {
+  width: 1px!important;
   background: #262424
 }
 
-.ace-merbivore-soft {
-  background-color: #1C1C1C;
+.ace-chrome {
+  background-color: #1C1C1C!important;
   color: #E6E1DC
 }
 
-.ace-merbivore-soft .ace_cursor {
+.ace-chrome .ace_cursor {
   color: #FFFFFF
 }
 
-.ace-merbivore-soft .ace_marker-layer .ace_selection {
+.ace-chrome .ace_marker-layer .ace_selection {
   background: #494949
 }
 
-.ace-merbivore-soft.ace_multiselect .ace_selection.ace_start {
-  box-shadow: 0 0 3px 0px #1C1C1C;
+.ace-chrome .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px #1C1C1C!important;
 }
 
-.ace-merbivore-soft .ace_marker-layer .ace_step {
+.ace-chrome .ace_marker-layer .ace_step {
   background: rgb(102, 82, 0)
 }
 
-.ace-merbivore-soft .ace_marker-layer .ace_bracket {
-  margin: -1px 0 0 -1px;
+.ace-chrome .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px!important;
   border: 1px solid #404040
 }
 
-.ace-merbivore-soft .ace_marker-layer .ace_active-line {
+.ace-chrome .ace_marker-layer .ace_active-line {
   background: #333435
 }
 
-.ace-merbivore-soft .ace_gutter-active-line {
+.ace-chrome .ace_gutter-active-line {
   background-color: #333435
 }
 
-.ace-merbivore-soft .ace_marker-layer .ace_selected-word {
+.ace-chrome .ace_marker-layer .ace_selected-word {
   border: 1px solid #494949
 }
 
-.ace-merbivore-soft .ace_invisible {
+.ace-chrome .ace_invisible {
   color: #404040
 }
 
-.ace-merbivore-soft .ace_entity.ace_name.ace_tag,
-.ace-merbivore-soft .ace_keyword,
-.ace-merbivore-soft .ace_meta,
-.ace-merbivore-soft .ace_meta.ace_tag,
-.ace-merbivore-soft .ace_storage {
+.ace-chrome .ace_entity.ace_name.ace_tag,
+.ace-chrome .ace_keyword,
+.ace-chrome .ace_meta,
+.ace-chrome .ace_meta.ace_tag,
+.ace-chrome .ace_storage {
   color: #FC803A
 }
 
-.ace-merbivore-soft .ace_constant,
-.ace-merbivore-soft .ace_constant.ace_character,
-.ace-merbivore-soft .ace_constant.ace_character.ace_escape,
-.ace-merbivore-soft .ace_constant.ace_other,
-.ace-merbivore-soft .ace_support.ace_type {
+.ace-chrome .ace_constant,
+.ace-chrome .ace_constant.ace_character,
+.ace-chrome .ace_constant.ace_character.ace_escape,
+.ace-chrome .ace_constant.ace_other,
+.ace-chrome .ace_support.ace_type {
   color: #68C1D8
 }
 
-.ace-merbivore-soft .ace_constant.ace_character.ace_escape {
+.ace-chrome .ace_constant.ace_character.ace_escape {
   color: #B3E5B4
 }
 
-.ace-merbivore-soft .ace_constant.ace_language {
+.ace-chrome .ace_constant.ace_language {
   color: #E1C582
 }
 
-.ace-merbivore-soft .ace_constant.ace_library,
-.ace-merbivore-soft .ace_string,
-.ace-merbivore-soft .ace_support.ace_constant {
+.ace-chrome .ace_constant.ace_library,
+.ace-chrome .ace_string,
+.ace-chrome .ace_support.ace_constant {
   color: #8EC65F
 }
 
-.ace-merbivore-soft .ace_constant.ace_numeric {
+.ace-chrome .ace_constant.ace_numeric {
   color: #7FC578
 }
 
-.ace-merbivore-soft .ace_invalid,
-.ace-merbivore-soft .ace_invalid.ace_deprecated {
-  color: #FFFFFF;
+.ace-chrome .ace_invalid,
+.ace-chrome .ace_invalid.ace_deprecated {
+  color: #FFFFFF!important;
   background-color: #FE3838
 }
 
-.ace-merbivore-soft .ace_fold {
-  background-color: #FC803A;
+.ace-chrome .ace_fold {
+  background-color: #FC803A!important;
   border-color: #E6E1DC
 }
 
-.ace-merbivore-soft .ace_comment,
-.ace-merbivore-soft .ace_meta {
-  font-style: italic;
+.ace-chrome .ace_comment,
+.ace-chrome .ace_meta {
+  font-style: italic!important;
   color: #AC4BB8
 }
 
-.ace-merbivore-soft .ace_entity.ace_other.ace_attribute-name {
+.ace-chrome .ace_entity.ace_other.ace_attribute-name {
   color: #EAF1A3
 }
 
-.ace-merbivore-soft .ace_indent-guide {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWOQkpLyZfD09PwPAAfYAnaStpHRAAAAAElFTkSuQmCC) right repeat-y
+.ace-chrome .ace_indent-guide {
+  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWOQkpLyZfD09PwPAAfYAnaStpHRAAAAAElFTkSuQmCC) right repeat-y
 }
