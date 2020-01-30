@@ -1,4 +1,4 @@
-/* CSS style content from github's default pygments highlighter template.
+/* CSS style content from github's default pygments highlighter template.!important;
    Cursor and selection styles from textmate.css. */
 .ace-chrome .ace_gutter {
   background: #e8e8e8!important;
@@ -111,7 +111,7 @@
 }
 
 .ace-chrome .ace_invisible {
-  color: #BFBFBF
+  color: #BFBFBF!important;
 }
 
 .ace-chrome .ace_print-margin {

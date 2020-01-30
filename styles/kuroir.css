@@ -49,7 +49,7 @@
 }
 
 .ace-chrome .ace_invisible {
-  color: #BFBFBF
+  color: #BFBFBF!important;
 }
 
 .ace-chrome .ace_fold {

@@ -1,24 +1,24 @@
 .ace-chrome .ace_gutter {
   background: #fbf1d3!important;
-  color: #333
+  color: #333!important;
 }
 
 .ace-chrome .ace_print-margin {
   width: 1px!important;
-  background: #e8e8e8
+  background: #e8e8e8!important;
 }
 
 .ace-chrome {
   background-color: #FDF6E3!important;
-  color: #586E75
+  color: #586E75!important;
 }
 
 .ace-chrome .ace_cursor {
-  color: #000000
+  color: #000000!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selection {
-  background: rgba(7, 54, 67, 0.09)
+  background: rgba(7, 54, 67, 0.09)!important;
 }
 
 .ace-chrome .ace_selection.ace_start {
@@ -26,53 +26,53 @@
 }
 
 .ace-chrome .ace_marker-layer .ace_step {
-  background: rgb(255, 255, 0)
+  background: rgb(255, 255, 0)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_bracket {
   margin: -1px 0 0 -1px!important;
-  border: 1px solid rgba(147, 161, 161, 0.50)
+  border: 1px solid rgba(147, 161, 161, 0.50)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_active-line {
-  background: #EEE8D5
+  background: #EEE8D5!important;
 }
 
 .ace-chrome .ace_gutter-active-line {
-  background-color : #EDE5C1
+  background-color : #EDE5C1!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selected-word {
-  border: 1px solid #7f9390
+  border: 1px solid #7f9390!important;
 }
 
 .ace-chrome .ace_invisible {
-  color: rgba(147, 161, 161, 0.50)
+  color: rgba(147, 161, 161, 0.50)!important;
 }
 
 .ace-chrome .ace_keyword,
 .ace-chrome .ace_meta,
 .ace-chrome .ace_support.ace_class,
 .ace-chrome .ace_support.ace_type {
-  color: #859900
+  color: #859900!important;
 }
 
 .ace-chrome .ace_constant.ace_character,
 .ace-chrome .ace_constant.ace_other {
-  color: #CB4B16
+  color: #CB4B16!important;
 }
 
 .ace-chrome .ace_constant.ace_language {
-  color: #B58900
+  color: #B58900!important;
 }
 
 .ace-chrome .ace_constant.ace_numeric {
-  color: #D33682
+  color: #D33682!important;
 }
 
 .ace-chrome .ace_fold {
   background-color: #268BD2!important;
-  border-color: #586E75
+  border-color: #586E75!important;
 }
 
 .ace-chrome .ace_entity.ace_name.ace_function,
@@ -80,26 +80,26 @@
 .ace-chrome .ace_support.ace_function,
 .ace-chrome .ace_variable,
 .ace-chrome .ace_variable.ace_language {
-  color: #268BD2
+  color: #268BD2!important;
 }
 
 .ace-chrome .ace_storage {
-  color: #073642
+  color: #073642!important;
 }
 
 .ace-chrome .ace_string {
-  color: #2AA198
+  color: #2AA198!important;
 }
 
 .ace-chrome .ace_string.ace_regexp {
-  color: #D30102
+  color: #D30102!important;
 }
 
 .ace-chrome .ace_comment,
 .ace-chrome .ace_entity.ace_other.ace_attribute-name {
-  color: #93A1A1
+  color: #93A1A1!important;
 }
 
 .ace-chrome .ace_indent-guide {
-  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHjy8NJ/AAjgA5fzQUmBAAAAAElFTkSuQmCC) right repeat-y
+  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHjy8NJ/AAjgA5fzQUmBAAAAAElFTkSuQmCC) right repeat-y!important;
 }

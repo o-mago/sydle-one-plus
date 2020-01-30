@@ -3,30 +3,30 @@
 
 .ace-chrome .ace_gutter {
   background: #e8e8e8!important;
-  color: #333
+  color: #333!important;
 }
 
 .ace-chrome .ace_print-margin {
   width: 1px!important;
-  background: #e8e8e8
+  background: #e8e8e8!important;
 }
 
 .ace-chrome {
   background-color: #f3f2f3!important;
-  color: rgba(15, 0, 9, 1.0)
+  color: rgba(15, 0, 9, 1.0)!important;
 }
 
 .ace-chrome .ace_cursor {
-  border-left: 2px solid #100011
+  border-left: 2px solid #100011!important;
 }
 
 .ace-chrome .ace_overwrite-cursors .ace_cursor {
   border-left: 0px!important;
-  border-bottom: 1px solid #100011
+  border-bottom: 1px solid #100011!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selection {
-  background: rgba(100, 5, 208, 0.27)
+  background: rgba(100, 5, 208, 0.27)!important;
 }
 
 .ace-chrome .ace_selection.ace_start {
@@ -34,7 +34,7 @@
 }
 
 .ace-chrome .ace_marker-layer .ace_step {
-  background: rgb(198, 219, 174)
+  background: rgb(198, 219, 174)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_bracket {
@@ -43,101 +43,101 @@
 }
 
 .ace-chrome .ace_marker-layer .ace_active-line {
-  background: rgb(232, 242, 254)
+  background: rgb(232, 242, 254)!important;
 }
 
 .ace-chrome .ace_gutter-active-line {
-  background-color: rgb(232, 242, 254)
+  background-color: rgb(232, 242, 254)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selected-word {
-  border: 1px solid rgba(100, 5, 208, 0.27)
+  border: 1px solid rgba(100, 5, 208, 0.27)!important;
 }
 
 .ace-chrome .ace_invisible {
-  color: #BFBFBF
+  color: #BFBFBF!important;
 }
 
 .ace-chrome .ace_fold {
   background-color: rgba(2, 95, 73, 0.97)!important;
-  border-color: rgba(15, 0, 9, 1.0)
+  border-color: rgba(15, 0, 9, 1.0)!important;
 }
 
 .ace-chrome .ace_keyword {
   color: #674Aa8!important;
-  rbackground-color: rgba(163, 170, 216, 0.055)
+  rbackground-color: rgba(163, 170, 216, 0.055)!important;
 }
 
 .ace-chrome .ace_constant.ace_language {
   color: #7D7e52!important;
-  rbackground-color: rgba(189, 190, 130, 0.059)
+  rbackground-color: rgba(189, 190, 130, 0.059)!important;
 }
 
 .ace-chrome .ace_constant.ace_numeric {
   color: rgba(79, 130, 123, 0.93)!important;
-  rbackground-color: rgba(119, 194, 187, 0.059)
+  rbackground-color: rgba(119, 194, 187, 0.059)!important;
 }
 
 .ace-chrome .ace_constant.ace_character,
 .ace-chrome .ace_constant.ace_other {
   color: rgba(2, 95, 105, 1.0)!important;
-  rbackground-color: rgba(127, 34, 153, 0.063)
+  rbackground-color: rgba(127, 34, 153, 0.063)!important;
 }
 
 .ace-chrome .ace_support.ace_function {
   color: #9D7e62!important;
-  rbackground-color: rgba(189, 190, 130, 0.039)
+  rbackground-color: rgba(189, 190, 130, 0.039)!important;
 }
 
 .ace-chrome .ace_support.ace_class {
   color: rgba(239, 106, 167, 1.0)!important;
-  rbackground-color: rgba(239, 106, 167, 0.063)
+  rbackground-color: rgba(239, 106, 167, 0.063)!important;
 }
 
 .ace-chrome .ace_storage {
   color: rgba(123, 92, 191, 1.0)!important;
-  rbackground-color: rgba(139, 93, 223, 0.051)
+  rbackground-color: rgba(139, 93, 223, 0.051)!important;
 }
 
 .ace-chrome .ace_invalid {
   color: #DFDFD5!important;
-  rbackground-color: #CC1B27
+  rbackground-color: #CC1B27!important;
 }
 
 .ace-chrome .ace_string {
   color: #5a5f9b!important;
-  rbackground-color: rgba(170, 175, 219, 0.035)
+  rbackground-color: rgba(170, 175, 219, 0.035)!important;
 }
 
 .ace-chrome .ace_comment {
   font-style: italic!important;
   color: rgba(64, 79, 80, 0.67)!important;
-  rbackground-color: rgba(95, 15, 255, 0.0078)
+  rbackground-color: rgba(95, 15, 255, 0.0078)!important;
 }
 
 .ace-chrome .ace_entity.ace_name.ace_function,
 .ace-chrome .ace_variable {
   color: rgba(2, 95, 73, 0.97)!important;
-  rbackground-color: rgba(34, 255, 73, 0.12)
+  rbackground-color: rgba(34, 255, 73, 0.12)!important;
 }
 
 .ace-chrome .ace_variable.ace_language {
   color: #316fcf!important;
-  rbackground-color: rgba(58, 175, 255, 0.039)
+  rbackground-color: rgba(58, 175, 255, 0.039)!important;
 }
 
 .ace-chrome .ace_variable.ace_parameter {
   font-style: italic!important;
   color: rgba(51, 150, 159, 0.87)!important;
-  rbackground-color: rgba(5, 214, 249, 0.043)
+  rbackground-color: rgba(5, 214, 249, 0.043)!important;
 }
 
 .ace-chrome .ace_entity.ace_other.ace_attribute-name {
   color: rgba(73, 70, 194, 0.93)!important;
-  rbackground-color: rgba(73, 134, 194, 0.035)
+  rbackground-color: rgba(73, 134, 194, 0.035)!important;
 }
 
 .ace-chrome .ace_entity.ace_name.ace_tag {
   color: #3976a2!important;
-  rbackground-color: rgba(73, 166, 210, 0.039)
+  rbackground-color: rgba(73, 166, 210, 0.039)!important;
 }

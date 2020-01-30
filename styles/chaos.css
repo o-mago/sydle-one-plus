@@ -126,15 +126,15 @@
 }
 
 .ace-chrome .ace_fold-widget.ace_start:after {
-  content: '▾'
+  content: '▾'!important;
 }
 
 .ace-chrome .ace_fold-widget.ace_end:after {
-  content: '▴'
+  content: '▴'!important;
 }
 
 .ace-chrome .ace_fold-widget.ace_closed:after {
-  content: '‣'
+  content: '‣'!important;
 }
 
 .ace-chrome .ace_indent-guide {
@@ -145,7 +145,7 @@
 .ace-chrome .ace_fold { 
   background: #222!important; 
   border-radius: 3px!important; 
-  color: #7AF!important; 
+  color: #7AF!important;
   border: none!important; 
 }
 .ace-chrome .ace_fold:hover {

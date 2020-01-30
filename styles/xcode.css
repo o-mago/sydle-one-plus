@@ -2,25 +2,25 @@
 
 .ace-chrome .ace_gutter {
   background: #e8e8e8!important;
-  color: #333
+  color: #333!important;
 }
 
 .ace-chrome .ace_print-margin {
   width: 1px!important;
-  background: #e8e8e8
+  background: #e8e8e8!important;
 }
 
 .ace-chrome {
   background-color: #FFFFFF!important;
-  color: #000000
+  color: #000000!important;
 }
 
 .ace-chrome .ace_cursor {
-  color: #000000
+  color: #000000!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selection {
-  background: #B5D5FF
+  background: #B5D5FF!important;
 }
 
 .ace-chrome .ace_selection.ace_start {
@@ -28,75 +28,75 @@
 }
 
 .ace-chrome .ace_marker-layer .ace_step {
-  background: rgb(198, 219, 174)
+  background: rgb(198, 219, 174)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_bracket {
   margin: -1px 0 0 -1px!important;
-  border: 1px solid #BFBFBF
+  border: 1px solid #BFBFBF!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_active-line {
-  background: rgba(0, 0, 0, 0.071)
+  background: rgba(0, 0, 0, 0.071)!important;
 }
 
 .ace-chrome .ace_gutter-active-line {
-  background-color: rgba(0, 0, 0, 0.071)
+  background-color: rgba(0, 0, 0, 0.071)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selected-word {
-  border: 1px solid #B5D5FF
+  border: 1px solid #B5D5FF!important;
 }
 
 .ace-chrome .ace_constant.ace_language,
 .ace-chrome .ace_keyword,
 .ace-chrome .ace_meta,
 .ace-chrome .ace_variable.ace_language {
-  color: #C800A4
+  color: #C800A4!important;
 }
 
 .ace-chrome .ace_invisible {
-  color: #BFBFBF
+  color: #BFBFBF!important;
 }
 
 .ace-chrome .ace_constant.ace_character,
 .ace-chrome .ace_constant.ace_other {
-  color: #275A5E
+  color: #275A5E!important;
 }
 
 .ace-chrome .ace_constant.ace_numeric {
-  color: #3A00DC
+  color: #3A00DC!important;
 }
 
 .ace-chrome .ace_entity.ace_other.ace_attribute-name,
 .ace-chrome .ace_support.ace_constant,
 .ace-chrome .ace_support.ace_function {
-  color: #450084
+  color: #450084!important;
 }
 
 .ace-chrome .ace_fold {
   background-color: #C800A4!important;
-  border-color: #000000
+  border-color: #000000!important;
 }
 
 .ace-chrome .ace_entity.ace_name.ace_tag,
 .ace-chrome .ace_support.ace_class,
 .ace-chrome .ace_support.ace_type {
-  color: #790EAD
+  color: #790EAD!important;
 }
 
 .ace-chrome .ace_storage {
-  color: #C900A4
+  color: #C900A4!important;
 }
 
 .ace-chrome .ace_string {
-  color: #DF0002
+  color: #DF0002!important;
 }
 
 .ace-chrome .ace_comment {
-  color: #008E00
+  color: #008E00!important;
 }
 
 .ace-chrome .ace_indent-guide {
-  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==) right repeat-y
+  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==) right repeat-y!important;
 }

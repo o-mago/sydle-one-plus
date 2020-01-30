@@ -1,28 +1,18 @@
 {
   "name": "Ace Editor Theme Sydle One",
   "description": "Change Ace Editor theme inside Sydle One",
-  "version": "1.2",
+  "version": "1.2.2",
   "web_accessible_resources": [
-    "styles/ambiance.css", "styles/chaos.css", "styles/chrome.css", "styles/clouds.css", 
-        "styles/clouds_midnight.css", "styles/cobalt.css", "styles/crimson_editor.css", "styles/dawn.css", 
-        "styles/dracula.css", "styles/dreamweaver.css", "styles/eclipse.css", "styles/github.css", "styles/gob.css", 
-        "styles/gruvbox.css", "styles/idle_fingers.css", "styles/iplastic.css", "styles/katzenmilch.css", "styles/kr_theme.css", 
-        "styles/kuroir.css", "styles/merbivore.css", "styles/merbivore_soft.css", "styles/monokai.css", "styles/mono_industrial.css", 
-        "styles/pastel_on_dark.css", "styles/solarized_dark.css", "styles/solarized_light.css", "styles/sqlserver.css", "styles/terminal.css", 
-        "styles/textmate.css", "styles/tomorrow.css", "styles/tomorrow_night.css", "styles/tomorrow_night_blue.css", "styles/tomorrow_night_bright.css", 
-        "styles/tomorrow_night_eighties.css", "styles/twilight.css", "styles/vibrant_ink.css", "styles/xcode.css"
+    "styles/*"
   ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://*.sydle.one/*"],
-      "css": ["styles/ambiance.css", "styles/chaos.css", "styles/chrome.css", "styles/clouds.css", 
-        "styles/clouds_midnight.css", "styles/cobalt.css", "styles/crimson_editor.css", "styles/dawn.css", 
-        "styles/dracula.css", "styles/dreamweaver.css", "styles/eclipse.css", "styles/github.css", "styles/gob.css", 
-        "styles/gruvbox.css", "styles/idle_fingers.css", "styles/iplastic.css", "styles/katzenmilch.css", "styles/kr_theme.css", 
-        "styles/kuroir.css", "styles/merbivore.css", "styles/merbivore_soft.css", "styles/monokai.css", "styles/mono_industrial.css", 
-        "styles/pastel_on_dark.css", "styles/solarized_dark.css", "styles/solarized_light.css", "styles/sqlserver.css", "styles/terminal.css", 
-        "styles/textmate.css", "styles/tomorrow.css", "styles/tomorrow_night.css", "styles/tomorrow_night_blue.css", "styles/tomorrow_night_bright.css", 
-        "styles/tomorrow_night_eighties.css", "styles/twilight.css", "styles/vibrant_ink.css", "styles/xcode.css"],
       "js": ["script.js"]
     }
   ],

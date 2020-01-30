@@ -114,7 +114,7 @@
 }
 
 .ace-chrome .ace_string.ace_regex {
-  color: rgb(255, 0, 0)
+  color: rgb(255, 0, 0)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selection {

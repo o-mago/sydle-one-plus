@@ -51,7 +51,7 @@
 }
 
 .ace-chrome .ace_support.ace_type,
-.ace-chrome .ace_support.ace_class
+.ace-chrome .ace_support.ace_class!important;
 .ace-chrome .ace_support.ace_other {
   color: rgb(109, 121, 222)!important;
 }
@@ -138,7 +138,7 @@
 }
 
 .ace-chrome .ace_string.ace_regex {
-  color: rgb(255, 0, 0)
+  color: rgb(255, 0, 0)!important;
 }
 
 .ace-chrome .ace_string {

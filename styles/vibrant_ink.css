@@ -1,24 +1,24 @@
 .ace-chrome .ace_gutter {
   background: #1a1a1a!important;
-  color: #BEBEBE
+  color: #BEBEBE!important;
 }
 
 .ace-chrome .ace_print-margin {
   width: 1px!important;
-  background: #1a1a1a
+  background: #1a1a1a!important;
 }
 
 .ace-chrome {
   background-color: #0F0F0F!important;
-  color: #FFFFFF
+  color: #FFFFFF!important;
 }
 
 .ace-chrome .ace_cursor {
-  color: #FFFFFF
+  color: #FFFFFF!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selection {
-  background: #6699CC
+  background: #6699CC!important;
 }
 
 .ace-chrome .ace_selection.ace_start {
@@ -26,84 +26,84 @@
 }
 
 .ace-chrome .ace_marker-layer .ace_step {
-  background: rgb(102, 82, 0)
+  background: rgb(102, 82, 0)!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_bracket {
   margin: -1px 0 0 -1px!important;
-  border: 1px solid #404040
+  border: 1px solid #404040!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_active-line {
-  background: #333333
+  background: #333333!important;
 }
 
 .ace-chrome .ace_gutter-active-line {
-  background-color: #333333
+  background-color: #333333!important;
 }
 
 .ace-chrome .ace_marker-layer .ace_selected-word {
-  border: 1px solid #6699CC
+  border: 1px solid #6699CC!important;
 }
 
 .ace-chrome .ace_invisible {
-  color: #404040
+  color: #404040!important;
 }
 
 .ace-chrome .ace_keyword,
 .ace-chrome .ace_meta {
-  color: #FF6600
+  color: #FF6600!important;
 }
 
 .ace-chrome .ace_constant,
 .ace-chrome .ace_constant.ace_character,
 .ace-chrome .ace_constant.ace_character.ace_escape,
 .ace-chrome .ace_constant.ace_other {
-  color: #339999
+  color: #339999!important;
 }
 
 .ace-chrome .ace_constant.ace_numeric {
-  color: #99CC99
+  color: #99CC99!important;
 }
 
 .ace-chrome .ace_invalid,
 .ace-chrome .ace_invalid.ace_deprecated {
   color: #CCFF33!important;
-  background-color: #000000
+  background-color: #000000!important;
 }
 
 .ace-chrome .ace_fold {
   background-color: #FFCC00!important;
-  border-color: #FFFFFF
+  border-color: #FFFFFF!important;
 }
 
 .ace-chrome .ace_entity.ace_name.ace_function,
 .ace-chrome .ace_support.ace_function,
 .ace-chrome .ace_variable {
-  color: #FFCC00
+  color: #FFCC00!important;
 }
 
 .ace-chrome .ace_variable.ace_parameter {
-  font-style: italic
+  font-style: italic!important;
 }
 
 .ace-chrome .ace_string {
-  color: #66FF00
+  color: #66FF00!important;
 }
 
 .ace-chrome .ace_string.ace_regexp {
-  color: #44B4CC
+  color: #44B4CC!important;
 }
 
 .ace-chrome .ace_comment {
-  color: #9933CC
+  color: #9933CC!important;
 }
 
 .ace-chrome .ace_entity.ace_other.ace_attribute-name {
   font-style: italic!important;
-  color: #99CC99
+  color: #99CC99!important;
 }
 
 .ace-chrome .ace_indent-guide {
-  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYNDTc/oPAALPAZ7hxlbYAAAAAElFTkSuQmCC) right repeat-y
+  background: url(data:image/png!important;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYNDTc/oPAALPAZ7hxlbYAAAAAElFTkSuQmCC) right repeat-y!important;
 }

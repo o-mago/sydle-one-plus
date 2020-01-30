@@ -89,7 +89,7 @@
 }
 
 .ace-chrome .ace_variable {
-  color: #06F
+  color: #06F!important;
 }
 
 .ace-chrome .ace_xml-pe {
@@ -168,7 +168,7 @@
 }
 
 .ace-chrome .ace_string.ace_regex {
-  color: rgb(255, 0, 0)
+  color: rgb(255, 0, 0)!important;
 }
 
 .ace-chrome .ace_indent-guide {

@@ -12,7 +12,7 @@
 }
 
 .ace-chrome .ace_marker-layer .ace_selection {
-  background: rgba(179, 101, 57, 0.75)
+  background: rgba(179, 101, 57, 0.75)!important;
 }
 
 .ace-chrome .ace_selection.ace_start {
