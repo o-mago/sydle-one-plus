@@ -1,11 +1,11 @@
 // Saves options to chrome.storage
 function save_options() {
-    var theme = document.getElementById('theme').value;
+    let theme = document.getElementById('theme').value;
     chrome.storage.sync.set({
         selectedTheme: theme
     }, function () {
         // Update status to let user know options were saved.
-        var status = document.getElementById('status');
+        let status = document.getElementById('status');
         status.textContent = 'Options saved.';
         setTimeout(function () {
             status.textContent = '';
@@ -20,11 +20,16 @@ function restore_options() {
         selectedTheme: 'styles/dracula.css',
     }, function (items) {
         document.getElementById('theme').value = items.selectedTheme;
+        change_option();
     });
 }
-document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-    save_options);
+
+const change_option = () => {
+    let option = document.getElementById("theme").value.split(".")[0].split("/")[1];
+    document.getElementById("theme_image").src="prints/"+option+".png";
+}
+
+document.getElementById("theme").onchange = change_option;
 
 chrome.runtime.getPackageDirectoryEntry(function(directoryEntry) {
     directoryEntry.getDirectory('styles', {}, function(subDirectoryEntry) {
@@ -45,11 +50,16 @@ chrome.runtime.getPackageDirectoryEntry(function(directoryEntry) {
                     
                         document.getElementById('theme').appendChild(opt);
                     });
+                    restore_options();
                 }
             });
         })();
     });
 });
+
+// document.addEventListener('DOMContentLoaded', restore_options);
+document.getElementById('save').addEventListener('click',
+    save_options);
 
 // themes.forEach(item => {
 //     let opt = document.createElement("option");
