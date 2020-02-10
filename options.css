@@ -1,0 +1,33 @@
+#editor {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 720px;
+    height: 500px;
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* font-family: 'Fira Code';
+    font-weight: normal;
+    font-style: normal; */
+}
+
+.options-menu {
+    display: flex;
+    height: 20px;
+    align-items: center;
+}
+
+#save {
+    margin-left: 10px;
+}
+
+#theme {
+    margin-right: 10px;
+}
+
+#status {
+    height: 10px;
+}

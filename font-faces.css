@@ -1,0 +1,31 @@
+/* @font-face{
+    font-family: 'Fira Code';
+    src: url('https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/eot/FiraCode-Regular.eot') format('embedded-opentype'),
+         url('https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/woff2/FiraCode-Regular.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/woff/FiraCode-Regular.woff') format('woff'),
+         url('https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face{
+    font-family: 'Fira Code';
+    src: url('./fonts/Fira\ Code.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Hack';
+    src: url('./fonts/Hack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Hasklig';
+    src: url('./fonts/Hasklig.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
