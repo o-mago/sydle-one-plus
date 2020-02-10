@@ -1,0 +1,1 @@
+document.getElementsByTagName("iframe")[document.getElementsByTagName("iframe").length-1].contentWindow.document.getElementsByClassName('ace_text-layer')[0].innerText;
