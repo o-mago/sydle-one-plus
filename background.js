@@ -8,3 +8,7 @@ chrome.contextMenus.create({
     "contexts": ["frame"],
     "onclick" : clickHandler
 });
+
+chrome.browserAction.onClicked.addListener(function () {
+    chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
+});

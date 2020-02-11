@@ -1,0 +1,10 @@
+.header {
+  height: 30%;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Open Sans",sans-serif;
+}
+
+h1 {
+  margin: 0px 0px 0px 30px;
+}

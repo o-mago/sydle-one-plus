@@ -25,5 +25,8 @@
   "background": {
     "page": "background.html"
   },
+  "browser_action": {
+    "title": "SYDLE ONE Config"
+  },
   "manifest_version": 2
 }
