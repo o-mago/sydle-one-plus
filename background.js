@@ -3,6 +3,10 @@ let clickHandler = (e, tab) => {
     console.log(e);
 }
 
+let favHandler = (info, tab) => {
+    console.log(info);
+}
+
 chrome.contextMenus.create({
     "title": "Git",
     "contexts": ["frame"],

@@ -1,0 +1,10 @@
+@font-face{
+  font-family: 'Fira Code';
+  src: url('../fonts/Fira\ Code.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ace-chrome {
+  font-family: 'Fira Code'!important;
+}

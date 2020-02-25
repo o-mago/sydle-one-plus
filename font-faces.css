@@ -29,3 +29,6 @@
     font-style: normal;
 }
 
+.ace-chrome {
+    font-family: 'monospace'!important;
+}

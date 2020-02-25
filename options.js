@@ -3,8 +3,10 @@ var editor = ace.edit("editor");
 // Saves options to chrome.storage
 function save_options() {
     let theme = document.getElementById('theme').value;
+    let font = document.getElementById("font").value;
     chrome.storage.sync.set({
-        selectedTheme: theme
+        selectedTheme: theme,
+        fontFamily: font
     }, function () {
         // Update status to let user know options were saved.
         let status = document.getElementById('status');
@@ -13,10 +15,6 @@ function save_options() {
             status.textContent = '';
         }, 750);
     });
-    let font = document.getElementById("font").value.split(".")[0].split("/")[1];
-    editor.setOptions({
-        fontFamily: font
-    });
 }
 
 // Restores select box and checkbox state using the preferences
@@ -24,8 +22,10 @@ function save_options() {
 function restore_options() {
     chrome.storage.sync.get({
         selectedTheme: 'styles/dracula.css',
+        fontFamily: 'fontFamilies/monospace.css'
     }, function (items) {
         document.getElementById('theme').value = items.selectedTheme;
+        document.getElementById('font').value = items.fontFamily;
         change_option();
     });
 }
@@ -33,9 +33,15 @@ function restore_options() {
 const change_option = () => {
     let theme = document.getElementById("theme").value.split(".")[0].split("/")[1];
     editor.setTheme("ace/theme/"+theme);
+    let font = document.getElementById("font").value.split(".")[0].split("/")[1];
+    console.log("oiiii", font);
+    editor.setOptions({
+        fontFamily: font
+    });
 }
 
 document.getElementById("theme").onchange = change_option;
+document.getElementById("font").onchange = change_option;
 
 chrome.runtime.getPackageDirectoryEntry(function(directoryEntry) {
     directoryEntry.getDirectory('styles', {}, function(subDirectoryEntry) {
@@ -61,7 +67,7 @@ chrome.runtime.getPackageDirectoryEntry(function(directoryEntry) {
             });
         })();
     });
-    directoryEntry.getDirectory('fonts', {}, function(subDirectoryEntry) {
+    directoryEntry.getDirectory('fontFamilies', {}, function(subDirectoryEntry) {
         var directoryReader = subDirectoryEntry.createReader();
         var filenames = [];
         (function readNext() {
@@ -74,7 +80,7 @@ chrome.runtime.getPackageDirectoryEntry(function(directoryEntry) {
                 } else {
                     filenames.forEach(item => {
                         let opt = document.createElement("option");
-                        opt.value= "fonts/"+item;
+                        opt.value = "fontFamilies/"+item;
                         opt.innerHTML = item.split('.')[0];
                     
                         document.getElementById('font').appendChild(opt);

@@ -1,0 +1,10 @@
+@font-face{
+  font-family: 'Hasklig';
+  src: url('../fonts/Hasklig.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ace-chrome {
+  font-family: 'Hasklig'!important;
+}

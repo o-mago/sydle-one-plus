@@ -4,7 +4,9 @@
   "version": "1.4.0",
   "web_accessible_resources": [
     "styles/*",
-    "fonts/*"
+    "fonts/*",
+    "fontFamilies/*",
+    "font-faces.css"
   ],
   "icons": {
     "16": "icon16.png",
