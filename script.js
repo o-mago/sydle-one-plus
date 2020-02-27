@@ -1,6 +1,6 @@
 function buildFavorites() {
     let favItems = "";
-    favList[workspace].forEach((elem) => {
+    favList && favList[workspace] && favList[workspace].forEach((elem) => {
         favItems += buildFavItem(elem);
     })
     return '<p-treenode id="favorito" class="dropzone">'+
@@ -8,13 +8,13 @@ function buildFavorites() {
     '<!---->'+
     '<li class="ui-treenode dropzone">'+
     '<div id="fav-tab-label" class="ui-treenode-content dropzone" pdraggable="expr" draggable="true">'+
-    '<span id="fav-arrow" class="ui-treenode-icon  ti-angle-down" style="pointer-events: none;">'+
+    '<span id="fav-arrow" class="ui-treenode-icon ti-angle-down" style="pointer-events: none;">'+
     '</span>'+
     '<!---->'+
     '<!---->'+
     '<span class="ui-treenode-label ui-corner-all dropzone">'+
     '<!---->'+
-    '<span class="not-leaf dropzone" style="color: #000000; pointer-events: none;">Favoritos</span>'+
+    '<span class="not-leaf" style="color: #000000; pointer-events: none;">Favoritos</span>'+
     '<!---->'+
     '<span class="ti-heart title-button dropzone" style="margin-left: 5px">'+
     '</span>'+
@@ -37,7 +37,7 @@ function buildFavItem(elem) {
     '<!---->'+
     '<!---->'+
     '<li data-close class="ui-treenode">'+
-    '<span data-rem="'+elem+'" class="ui-treenode-icon ti-close" style="margin-left: -10px; visibility: hidden">'+
+    '<span data-rem="'+elem+'" class="ui-treenode-icon ti-close" style="margin-left: -16px; visibility: hidden">'+
     '</span>'+
     '<span class="ui-treenode-leaf-icon ui-treenode-icon '+String.fromCharCode(65+Math.floor(Math.random(new Date) * 26))+'">'+
     '</span>'+
@@ -59,7 +59,7 @@ function buildFavItem(elem) {
     '</p-treenode>'
 }
 
-let favoritesHTML = '<button id="fav-button" class="ng-star-inserted dropzone" title="Favoritos" style="'+
+let favoritesHTML = '<button id="fav-button" class="ng-star-inserted dropzone" title="Arraste para cá suas classes favoritas" style="'+
 'background: 0 0;border: 0;font-size: 14px;color: #838383; z-index: 99999;float: right;display: inline-block; visibility: hidden;">'+
 '<span class="ti-heart title-button" style="pointer-events: none;">'
 '</span>'+
@@ -67,7 +67,7 @@ let favoritesHTML = '<button id="fav-button" class="ng-star-inserted dropzone" t
 
 var listener = false;
 
-var dragged = "";
+var dragged = null;
 
 var workspace = window.location.hostname.split(".sydle")[0];
 
@@ -80,14 +80,23 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
     let iframe = document.getElementsByTagName("iframe")[size].contentWindow.document;
     Object.keys(changes).forEach((key) => {
         if(key === 'selectedTheme') {
+            iframe.getElementById("ace-sydle").remove();
             iframe.head.insertAdjacentHTML('beforeend',
             '<link id="ace-sydle" rel="stylesheet" type="text/css" href="' + 
             chrome.runtime.getURL(changes[key].newValue) + '">' 
             );
         } else if(key === 'fontFamily') {
+            iframe.getElementById("font-sydle").remove();
             iframe.head.insertAdjacentHTML('beforeend',
-            '<link rel="stylesheet" type="text/css" href="' + 
+            '<link id="font-sydle" rel="stylesheet" type="text/css" href="' + 
             chrome.runtime.getURL(changes[key].newValue) + '">' 
+            );
+        } else if(key === 'fontSize') {
+            iframe.getElementById("font-size-sydle").remove();
+            iframe.head.insertAdjacentHTML('beforeend',
+            '<style id="font-size-sydle" type="text/css">'+
+            '.ace-chrome {font-size: '+changes[key].newValue+'px!important;}'+
+            '</style>"'
             );
         }
     })
@@ -132,7 +141,7 @@ const favClick = (event) => {
 }
 
 const removeFavClick = (event) => {
-    console.log(event);
+    // console.log(event);
     let iframe = event.path[event.path.length-2];
     let removedElem = event.srcElement.attributes[0].value;
     let option = iframe.querySelector('p-treenode[data-fav="'+removedElem+'"]');
@@ -166,16 +175,24 @@ function updateCss() {
                 
                 chrome.storage.sync.get({
                     selectedTheme: 'styles/dracula.css',
-                    fontFamily: 'monospace'
+                    fontFamily: 'monospace',
+                    fontSize: '12'
                 }, function (items) {
-                    iframe.head.insertAdjacentHTML('beforeend',
-                    '<link id="ace-sydle" rel="stylesheet" type="text/css" href="' + 
-                    chrome.runtime.getURL(items.selectedTheme) + '">' 
-                    );
-                    iframe.head.insertAdjacentHTML('beforeend',
-                    '<link rel="stylesheet" type="text/css" href="' + 
-                    chrome.runtime.getURL(items.fontFamily) + '">' 
-                    );
+                    if(iframe.getElementById('ace-sydle') === null) {
+                        iframe.head.insertAdjacentHTML('beforeend',
+                        '<link id="ace-sydle" rel="stylesheet" type="text/css" href="' + 
+                        chrome.runtime.getURL(items.selectedTheme) + '">' 
+                        );
+                        iframe.head.insertAdjacentHTML('beforeend',
+                        '<link id="font-sydle" rel="stylesheet" type="text/css" href="' + 
+                        chrome.runtime.getURL(items.fontFamily) + '">' 
+                        );
+                        iframe.head.insertAdjacentHTML('beforeend',
+                        '<style id="font-size-sydle" type="text/css">'+
+                        '.ace-chrome {font-size: '+items.fontSize+'px!important;}'+
+                        '</style>"'
+                        );
+                    }
                 });
             }
             buildFavoritesTab();
@@ -187,16 +204,16 @@ function updateCss() {
 }
 
 function toggleArrow(elem) {
-    console.log(elem);
+    // console.log(elem);
     elem.classList.toggle('ti-angle-down');
     elem.classList.toggle('ti-angle-right');
 }
 
 function checkFavorites() {
     let iframe = document.querySelector('iframe[slotname="explorer_class_listing"]').contentWindow.document;
-    if(!favList[workspace] || favList[workspace].length === 0) {
+    if((!favList[workspace] || favList[workspace].length === 0) && iframe.getElementById('favorito')) {
         iframe.getElementById('favorito').style.display = 'none';
-    } else {
+    } else if(iframe.getElementById('favorito')){
         iframe.getElementById('favorito').style.display = 'block';
     }
 }
@@ -226,14 +243,19 @@ function buildFavoritesTab() {
             return;
         }
         if(!iframe.getElementById("favorito") && favList !== undefined) {
-            console.log("oi");
+            // console.log(iframe.getElementById("favorito"));
             listener = false;
             iframe.querySelector("ul.ui-tree-container").insertAdjacentHTML('afterbegin', buildFavorites());
+            // console.log("oooo loquinho meu");
             checkFavorites();
             iframe.addEventListener("dragstart", function( event ) {
                 // store a ref. on the dragged elem
-                dragged = event.target.innerText + "/" + event.target.parentElement.parentElement.parentElement.parentElement.children[0].innerText;
-                console.log("dragged ", dragged);
+                if(event.target.children[1].classList.contains("ui-treenode-leaf-icon")) {
+                    dragged = event.target.innerText + "/" + event.target.parentElement.parentElement.parentElement.parentElement.children[0].innerText;
+                } else {
+                    dragged = null;
+                }
+                // console.log("dragged ", dragged);
                 // make it half transparent
                 event.target.style.opacity = .2;
             }, false);
@@ -242,6 +264,7 @@ function buildFavoritesTab() {
                 event.target.style.opacity = 1;
             }, false);
             addDraggedListeners(iframe);
+            // console.log("testando");
             iframe.getElementById("fav-tab-label").addEventListener('click', favLabelClick);
             iframe.querySelectorAll("div[data-fav]").forEach((elem, index) => {
                 elem.addEventListener('click', favClick);
@@ -260,7 +283,7 @@ function buildFavoritesTab() {
         }
     }
     if(!document.getElementById('fav-button')) {
-        console.log(document.querySelector("div.title"));
+        // console.log(document.querySelector("div.title"));
         document.querySelector("div.title").insertAdjacentHTML('beforeend', favoritesHTML);
         // document.getElementById("fav-button").addEventListener('click', (event) => {
         //     console.log("irrrrrrraaaaa");
@@ -323,9 +346,15 @@ function addDraggedListeners(where) {
         event.preventDefault();
         // move dragged elem to the selected drop target
         if (event.target.classList.contains("dropzone")) {
-            console.log("apoooooooooooo");
+            event.target.style.color = "#838383";
+        }
+        if (event.target.classList.contains("dropzone") && dragged !== null) {
+            // console.log("apoooooooooooo");
             event.target.style.color = "#838383";
             console.log(dragged);
+            if(!favList) {
+                favList = {};
+            }
             if(!favList[workspace]) {
                 favList[workspace] = [];
             }

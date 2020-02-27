@@ -1,11 +1,12 @@
 {
-  "name": "Ace Editor Theme Sydle One",
-  "description": "Change Ace Editor theme inside Sydle One",
-  "version": "1.4.0",
+  "name": "Sydle One +",
+  "description": "Changes on Sydle One platform",
+  "version": "1.5.0",
   "web_accessible_resources": [
     "styles/*",
     "fonts/*",
     "fontFamilies/*",
+    "ace-editor/*",
     "font-faces.css"
   ],
   "icons": {
