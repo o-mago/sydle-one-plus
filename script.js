@@ -175,7 +175,7 @@ function updateCss() {
                 
                 chrome.storage.sync.get({
                     selectedTheme: 'styles/dracula.css',
-                    fontFamily: 'monospace',
+                    fontFamily: 'fontFamilies/monospace.css',
                     fontSize: '12'
                 }, function (items) {
                     if(iframe.getElementById('ace-sydle') === null) {
