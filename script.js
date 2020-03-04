@@ -21,7 +21,7 @@ function buildFavorites() {
     '</span>'+
     '</div>'+
     '<!---->'+
-    '<ul id="favorites-list" class="ui-treenode-children dropzone" style="display: block;">'+
+    '<ul id="favorites-list" class="ui-treenode-children dropzone" style="display: block; padding: 0 0 0 0;">'+
     '<!---->'+
     favItems+
     '</ul>'+
@@ -36,7 +36,7 @@ function buildFavItem(elem) {
     return '<p-treenode data-fav="'+elem+'">'+
     '<!---->'+
     '<!---->'+
-    '<li data-close class="ui-treenode">'+
+    '<li data-close class="ui-treenode" style="padding-left: 13px;">'+
     '<span data-rem="'+elem+'" class="ui-treenode-icon ti-close" style="margin-left: -16px; visibility: hidden">'+
     '</span>'+
     '<span class="ui-treenode-leaf-icon ui-treenode-icon '+String.fromCharCode(65+Math.floor(Math.random(new Date) * 26))+'">'+
@@ -98,6 +98,8 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
             '.ace-chrome {font-size: '+changes[key].newValue+'px!important;}'+
             '</style>"'
             );
+        } else if(key === 'sydleFav') {
+            updateFav(changes[key].newValue);
         }
     })
 });
@@ -142,16 +144,17 @@ const favClick = (event) => {
 
 const removeFavClick = (event) => {
     // console.log(event);
-    let iframe = event.path[event.path.length-2];
+    // let iframe = event.path[event.path.length-2];
     let removedElem = event.srcElement.attributes[0].value;
-    let option = iframe.querySelector('p-treenode[data-fav="'+removedElem+'"]');
-    option.remove();
-    favList[workspace] = favList[workspace].filter((value) => {
+    // let option = iframe.querySelector('p-treenode[data-fav="'+removedElem+'"]');
+    // option.remove();
+    let newFavList = JSON.parse(JSON.stringify(favList));
+    newFavList[workspace] = favList[workspace].filter((value) => {
         return value !== removedElem;
     })
     checkFavorites();
     chrome.storage.sync.set({
-        sydleFav: favList
+        sydleFav: newFavList
     },() => {});
 }
 
@@ -351,7 +354,7 @@ function addDraggedListeners(where) {
         if (event.target.classList.contains("dropzone") && dragged !== null) {
             // console.log("apoooooooooooo");
             event.target.style.color = "#838383";
-            console.log(dragged);
+            // console.log(dragged);
             if(!favList) {
                 favList = {};
             }
@@ -359,42 +362,57 @@ function addDraggedListeners(where) {
                 favList[workspace] = [];
             }
             let sizeBefore = favList[workspace].length;
-            favList[workspace].push(dragged);
-            favList[workspace] = [... new Set(favList[workspace])];
-            let sizeAfter = favList[workspace].length;
-            console.log(favList);
+            let newFavList = JSON.parse(JSON.stringify(favList));
+            newFavList[workspace].push(dragged);
+            newFavList[workspace] = [... new Set(newFavList[workspace])];
+            let sizeAfter = newFavList[workspace].length;
+            // console.log(favList);
             if(sizeAfter > sizeBefore) {
                 checkFavorites();
                 chrome.storage.sync.set({
-                    sydleFav: favList
-                }, () => {
-                    let iframe = document.querySelector('iframe[slotname="explorer_class_listing"]').contentWindow.document;
-                    if(!iframe.getElementById("favorites-list")) {
-                        buildFavoritesTab();
-                    } else {
-                        iframe.getElementById("favorites-list").insertAdjacentHTML('beforeEnd', buildFavItem(dragged));
-                        iframe.querySelectorAll('div[data-fav="'+dragged.split("/")[0]+'"]').forEach((elem, index) => {
-                            elem.addEventListener('click', favClick);
-                        });
-                        iframe.querySelectorAll("span[data-rem]").forEach((elem, index) => {
-                            elem.addEventListener('click', removeFavClick);
-                        });
-                        iframe.querySelectorAll("li[data-close]").forEach((elem, index) => {
-                            elem.addEventListener('mouseenter', (event) => {
-                                event.srcElement.children[0].style.visibility = 'visible';
-                            });
-                            elem.addEventListener('mouseleave', (event) => {
-                                event.srcElement.children[0].style.visibility = 'hidden';
-                            });
-                        });
-                    }
-                });
+                    sydleFav: newFavList
+                }, () => {});
             }
             // dragged.parentNode.removeChild( dragged );
             // event.target.appendChild( dragged );
         }
       
     }, false);
+}
+
+function updateFav(newList) {
+    let iframe = document.querySelector('iframe[slotname="explorer_class_listing"]').contentWindow.document;
+    let addedFilteredList = newList[workspace].filter((elem) => !favList[workspace].includes(elem));
+    let removedFilteredList = favList[workspace].filter((elem) => !newList[workspace].includes(elem));
+    favList = newList;
+    if(!iframe.getElementById("favorites-list")) {
+        buildFavoritesTab();
+    } else if (addedFilteredList.length > 0) {
+        // console.log(filteredList);
+        addedFilteredList.forEach((newFav) => {
+            iframe.getElementById("favorites-list").insertAdjacentHTML('beforeEnd', buildFavItem(newFav));
+            iframe.querySelectorAll('div[data-fav="'+newFav.split("/")[0]+'"]').forEach((elem, index) => {
+                elem.addEventListener('click', favClick);
+            });
+            iframe.querySelectorAll("span[data-rem]").forEach((elem, index) => {
+                elem.addEventListener('click', removeFavClick);
+            });
+            iframe.querySelectorAll("li[data-close]").forEach((elem, index) => {
+                elem.addEventListener('mouseenter', (event) => {
+                    event.srcElement.children[0].style.visibility = 'visible';
+                });
+                elem.addEventListener('mouseleave', (event) => {
+                    event.srcElement.children[0].style.visibility = 'hidden';
+                });
+            });
+        });
+    } else if (removedFilteredList.length > 0) {
+        removedFilteredList.forEach((removedFav) => {
+            let option = iframe.querySelector('p-treenode[data-fav="'+removedFav+'"]');
+            option.remove();
+        });
+    }
+    checkFavorites();
 }
 
 addDraggedListeners(document);
