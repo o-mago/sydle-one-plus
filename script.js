@@ -165,9 +165,12 @@ const removeCss = () => {
 }
 
 function updateCss() {
+    // console.log("teste");
     try {
+        addWorkspace();
         let size = document.getElementsByTagName("iframe").length-1;
         if(size >= 0) {
+            showCardId(size);
             let iframe = document.getElementsByTagName("iframe")[size].contentWindow.document;
             if(iframe.getElementById('ace-sydle') === null) {
 
@@ -200,6 +203,56 @@ function updateCss() {
         }
     } catch {
 
+    }
+}
+
+function addWorkspace() {
+    if(!document.getElementById('workspace-id')) {
+        let upperBar = document.getElementsByClassName('subheader')[0];
+        let titleBar = document.getElementsByClassName('sy-title-column')[0];
+        let buttonBar = document.getElementsByClassName('sy-button-column')[0];
+        upperBar.style = "display: flex;";
+        titleBar.style = "flex-grow: 1; flex-basis: 0;";
+        buttonBar.style = "flex-grow: 1; flex-basis: 0;";
+        buttonBar.insertAdjacentHTML('beforebegin', '<span id="workspace-id" style="text-align: center; flex-grow: 1; flex-basis: 0; margin: auto auto; font-size: 17pt; font-weight: 300;">'+workspace.toUpperCase()+'</span>');
+    }
+}
+
+var firstCardId = null;
+var cardsSize = 0;
+
+function showCardId(size) {
+    if(size >= 1) {
+        let iframe = document.getElementsByTagName("iframe")[size-1].contentWindow.document;
+        let cards = iframe.querySelectorAll('[data-card-id]');
+        let firstId = cards[0].getAttribute('data-card-id');
+        if(firstCardId !== firstId || cardsSize !== cards.length) {
+            firstCard = firstId;
+            cardsSize = cards.length;
+            for (var i = 0; i < cards.length; i++) {
+                let cardTitle = cards[i].getElementsByClassName('sy-card-title')[0];
+                let dataCardId = cards[i].getAttribute('data-card-id');
+                let dataCardClassId = cards[i].getAttribute('data-card-class-id');
+                if(!cards[i].getElementsByClassName('sy-id').length) {
+                    cardTitle.insertAdjacentHTML('beforeend', '<div class="sy-id" _ngcontent-c13=""><!----><div _ngcontent-c13="" class="others"><span style="display: inline; color: #9a9a9a;" _ngcontent-c13="" class="card-feature-label">_id: </span><span style="display: inline; user-select: text; cursor: auto;" _ngcontent-c13="" class="truncate fix-userTask-name" title="'+dataCardId+'">'+dataCardId+'</span></div></div>');
+                }
+                if(!cards[i].getElementsByClassName('class-id').length) {
+                    cardTitle.insertAdjacentHTML('beforeend', '<div class="class-id" _ngcontent-c13=""><!----><div _ngcontent-c13="" class="others"><span style="display: inline; color: #9a9a9a;" _ngcontent-c13="" class="card-feature-label">class._id: </span><span style="display: inline; user-select: text; cursor: auto;" _ngcontent-c13="" class="truncate fix-userTask-name" title="'+dataCardClassId+'">'+dataCardClassId+'</span></div></div>');
+                }
+            }
+        }
+    }
+    let iframeElem = document.getElementsByTagName("iframe")[size];
+    let iframe = iframeElem.contentWindow.document;
+    let source = iframeElem.getAttribute("src");
+    let cid = source.match(/(?<=cid=)[^&]*/)[0];
+    let id = source.match(/(?<=&id=)[^&]*/)[0];
+    let cardTitle = iframe.getElementsByClassName('sy-card-title')[0];
+    if(!cardTitle.getElementsByClassName('sy-id').length) {
+        cardTitle.insertAdjacentHTML('beforeend', '<div class="sy-id" _ngcontent-c21=""><!----><div _ngcontent-c21="" class="others"><span style="display: inline;" _ngcontent-c21="" class="card-feature-label">_id: </span><span style="display: inline; user-select: text; cursor: auto;  color: #2e2e2e;" _ngcontent-c21="" class="truncate fix-userTask-name" title="'+id+'">'+id+'</span></div></div>');
+    }
+    if(!cardTitle.getElementsByClassName('class-id').length) {
+        cardTitle.insertAdjacentHTML('beforeend', '<div class="class-id" _ngcontent-c21=""><!----><div _ngcontent-c21="" class="others"><span style="display: inline;" _ngcontent-c21="" class="card-feature-label">class._id: </span><span style="display: inline; user-select: text; cursor: auto;  color: #2e2e2e;" _ngcontent-c21="" class="truncate fix-userTask-name" title="'+cid+'">'+cid+'</span></div></div>');
     }
 }
 
@@ -351,7 +404,7 @@ function addDraggedListeners(where) {
         if (event.target.classList.contains("dropzone") && dragged !== null) {
             // console.log("apoooooooooooo");
             event.target.style.color = "#838383";
-            console.log(dragged);
+            // console.log(dragged);
             if(!favList) {
                 favList = {};
             }
@@ -362,7 +415,7 @@ function addDraggedListeners(where) {
             favList[workspace].push(dragged);
             favList[workspace] = [... new Set(favList[workspace])];
             let sizeAfter = favList[workspace].length;
-            console.log(favList);
+            // console.log(favList);
             if(sizeAfter > sizeBefore) {
                 checkFavorites();
                 chrome.storage.sync.set({

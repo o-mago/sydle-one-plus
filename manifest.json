@@ -1,7 +1,7 @@
 {
   "name": "Sydle One +",
-  "description": "Changes on Sydle One platform",
-  "version": "1.5.0",
+  "description": "Improvements on Sydle One platform",
+  "version": "1.6.0",
   "web_accessible_resources": [
     "styles/*",
     "fonts/*",
@@ -24,7 +24,7 @@
     "page": "options.html",
     "open_in_tab": false
   },
-  "permissions": ["https://*.sydle.one/*", "storage", "contextMenus"],
+  "permissions": ["https://*.sydle.one/*", "storage"],
   "background": {
     "page": "background.html"
   },
