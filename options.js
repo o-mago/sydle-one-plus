@@ -5,10 +5,12 @@ function save_options() {
     let theme = document.getElementById('theme').value;
     let font = document.getElementById("font").value;
     let fontSize = document.getElementById("font-size").value;
+    let showId = document.getElementById("show-id").checked;
     chrome.storage.sync.set({
         selectedTheme: theme,
         fontFamily: font,
-        fontSize: fontSize
+        fontSize: fontSize,
+        showId: showId
     }, function () {
         // Update status to let user know options were saved.
         let status = document.getElementById('status');
@@ -26,10 +28,12 @@ function restore_options() {
         selectedTheme: 'styles/dracula.css',
         fontFamily: 'fontFamilies/monospace.css',
         fontSize: '12',
+        showId: false
     }, function (items) {
         document.getElementById('theme').value = items.selectedTheme;
         document.getElementById('font').value = items.fontFamily;
         document.getElementById('font-size').value = items.fontSize;
+        document.getElementById('show-id').checked = items.showId;
         change_option();
     });
 }

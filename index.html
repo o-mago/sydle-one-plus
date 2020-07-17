@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Theme Selection</title>
     <link rel="stylesheet" type="text/css" href="font-faces.css">
     <link rel="stylesheet" type="text/css" href="options.css">
 </head>
+
 <body>
-<div class="options-menu">
-    <p>Theme:</p>
-    <select id="theme">
-    </select>
-    <br>
-    <p>Font Family:</p>
-    <select id="font">
-    </select>
-    <br>
-    <p>Font Size:</p>
-    <select id="font-size">
-    </select>
-    <button id="save">Save</button>
-</div>
-</br>
-<div id="status"></div>
-</br>
-<div id="editor">function foo(items) {
+    <div id="main" class="main">
+        <div class="options-menu">
+            <div class="option">
+                <p>Theme:</p>
+                <select id="theme" class="input-option">
+                </select>
+                <br>
+            </div>
+            <div class="option">
+                <p>Font Family:</p>
+                <select id="font" class="input-option">
+                </select>
+                <br>
+            </div>
+            <div class="option">
+                <p>Font Size:</p>
+                <select id="font-size" class="input-option">
+                </select>
+            </div>
+            <div class="option">
+                <p style="margin-left: 10px;">Show Id:</p>
+                <label class="switch input-option" for="show-id">
+                    <input id="show-id" name="show-id" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button id="save">Save</button>
+        </div>
+        </br>
+        <div id="status"></div>
+        </br>
+        <div id="editor">function foo(items) {
     var x = "All this is syntax highlighted";
     return x;
 }</div>
-<script src="ace-editor/ace.js"></script>
-<script src="options.js"></script>
+    </div>
+    <script src="ace-editor/ace.js"></script>
+    <script src="options.js"></script>
 </body>
+
 </html>
