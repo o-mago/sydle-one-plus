@@ -242,7 +242,7 @@ function updateCss() {
             showId: false
         }, function (items) {
             if (items.showId) {
-                console.log(size);
+                // console.log(size);
                 try {
                     showCardId(size);
                 } catch (e) {
@@ -388,7 +388,7 @@ function showCardId(size) {
 }
 
 function infoClick(event) {
-    console.log(event);
+    // console.log(event);
     let syInfo = event.path[1].childNodes[3];
     if(syInfo.style.display === "none") {
         event.srcElement.style.color = "#001fff";
